@@ -1,0 +1,24 @@
+<div class = 'container'>
+   <h1 class='display-4'>All Scholen</h1>
+   <br/><br/>
+   <table class='table table-striped'>
+    <thead>
+      <tr>
+        <th scope='col'>Naam</th>
+        <th scope='col'>Locatie</th>
+        <th scope='col'>Soort</th>
+        <th scope='col'>Leerlingen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let school of scholen'>
+        <td><a [routerLink]="['delete', school.naam]"><img src='assets/delete.jpg' width='15' height='18'></a>&nbsp;&nbsp;
+            <a [routerLink]="['edit', school.naam]"> {{ school.naam }} </a>
+        </td>
+        <td> {{ school.locatie }} </td>
+        <td> {{ school.soort }} </td>
+        <td> {{ school.leerlingen }} </td>
+       </tr>
+    </tbody>
+  </table>
+</div>
